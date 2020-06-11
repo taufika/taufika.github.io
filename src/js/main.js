@@ -5,6 +5,8 @@ const PLAYABLE_AREA = {
   y0: 3000, y1: 4000,
 };
 
+window.UNIT_SIZE = 40;
+
 window.EventBus = new Vue({
   el: '#eb',
   template: '<div id="eb"></div>',

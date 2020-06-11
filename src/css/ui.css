@@ -9,8 +9,48 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  height: 50px;
   background: rgba(255, 255, 255, 0.7);
   padding: 10px;
   z-index: 99;
   font-family: sans-serif;
+}
+
+#topEdgeScroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(0deg, transparent 0%, rgba(0,0,0,0.1) 100%);
+  z-index: 99;
+}
+
+#bottomEdgeScroll {
+  position: fixed;
+  bottom: 70px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.1) 100%);
+  z-index: 99;
+}
+
+#leftEdgeScroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: calc(100vh - 70px);
+  background: linear-gradient(-90deg, transparent 0%, rgba(0,0,0,0.1) 100%);
+  z-index: 99;
+}
+#rightEdgeScroll {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 10px;
+  height: calc(100vh - 70px);
+  background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.1) 100%);
+  z-index: 99;
 }
