@@ -3,14 +3,28 @@
   <head>
     <title>Kota</title>
     <link rel="stylesheet" href="./src/css/terrain.css">
+    <link rel="stylesheet" href="./src/css/nature.css">
+    <link rel="stylesheet" href="./src/css/ui.css">
   </head>
   <body>
-    <div id="container">
-      <div id="field">
-        hehe
+    <div id="viewport">
+      <div id="eb"></div>
+      <div id="ui">
+        <div id="toolbar">
+          whut
+        </div>
       </div>
-      <div class="ground left"></div>
-      <div class="ground right"></div>
+      <div id="container">
+        <div id="field">
+        </div>
+        <div class="ground left"></div>
+        <div class="ground right"></div>
+        <!-- objects -->
+        <section id="objects">
+        </section>
+      </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>

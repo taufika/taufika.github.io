@@ -18,19 +18,33 @@ body {
 
 .ground.right {
   background: linear-gradient(90deg, rgba(103,60,0,1) 0%, rgba(179,113,21,1) 50%, rgba(60,35,1,1) 100%);
-  transform: rotateX(60deg) rotateZ(-45deg) rotateX(-90deg) translate3d(150px, -347px, 150px);
+  transform: rotateX(60deg) rotateZ(-45deg) rotateX(-90deg) translate3d(1500px, -2363px, 1500px);
   position: relative;
 }
 
 .ground.left {
   background: linear-gradient(-90deg, rgba(103,60,0,1) 0%, rgba(179,113,21,1) 50%, rgba(60,35,1,1) 100%);
   position: relative;
-  transform: rotateZ(90deg) rotateY(60deg) rotateZ(-45deg) rotateX(-90deg) translate3d(0, 354px, 300px);
+  transform: rotateZ(90deg) rotateY(60deg) rotateZ(-45deg) rotateX(-90deg) translate3d(0, 3472px, 3000px);
 }
 
 #container {
+  position: relative;
+  width: 6000px;
+  height: 6000px;
+  /* starting position */
+  left: -3000px;
+  top: -3000px;
+}
+
+#objects {
   position: absolute;
-  width: 600px;
-  height: 600px;
-  left: 150px;
+  top: 0;
+  left: 0;
+}
+
+.object {
+  position: absolute;
+  transform-origin: bottom center;
+  transform: rotateX(60deg) rotateZ(-45deg) rotateX(-90deg);
 }
