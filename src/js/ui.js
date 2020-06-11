@@ -13,6 +13,9 @@ const UI = new Vue({
   `,
   data: {
     isMoving: 'nowhere',
+    zoomLevel: 40,
+    maxZoom: 40,
+    minZoom: 10,
   },
   mounted() {
     // make ticker
@@ -30,6 +33,11 @@ const UI = new Vue({
       );
 
     })
+
+    const zoom = ($event) => {
+      this.zoom($event.deltaY * -1);
+    };
+    document.body.onwheel = _.debounce(zoom, 30);
   },
   methods: {
     clickTest() {
@@ -62,7 +70,20 @@ const UI = new Vue({
           break;
         }
       }
-    }
+    },
+    zoom(delta) {
+      this.zoomLevel += delta;
+      if (this.zoomLevel > this.maxZoom) {
+        this.zoomLevel = this.maxZoom;
+      }
+      if (this.zoomLevel < this.minZoom) {
+        this.zoomLevel = this.minZoom;
+      }
+      // 40 scale 100%
+      // 10 scale 25%
+      const scale = this.zoomLevel / this.maxZoom;
+      document.getElementById('container').style.transform = `scale(${scale})`;
+    },
   }
 });
 
