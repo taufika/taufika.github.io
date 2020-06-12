@@ -9,6 +9,14 @@ body {
   height: 100%;
   position: relative;
   transform: rotateX(60deg) rotateZ(-45deg);
+  display: grid;
+}
+
+#field .grid {
+  display: inline-grid;
+  width: 40px;
+  height: 40px;
+  background-color: black;
 }
 
 .ground {
