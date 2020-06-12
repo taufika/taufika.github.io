@@ -55,3 +55,19 @@
   background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.1) 100%);
   z-index: 98;
 }
+
+.gridCol {
+  display: inline-block;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transform: rotateZ(45deg) rotateX(-60deg) scaleY(3);
+}
+
+.gridArea {
+  width: 1500px;
+  height: 1500px;
+  position: absolute;
+  transform: rotateX(60deg) rotateZ(-45deg);
+}
