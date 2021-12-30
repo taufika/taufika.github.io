@@ -1,2 +1,0 @@
-# kota
-city cimulator
